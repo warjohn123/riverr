@@ -1,0 +1,9 @@
+<app-header></app-header>
+<app-sidebar (collapsedEvent)="receiveCollapsed($event)"></app-sidebar>
+
+<section class="main-container" [ngClass]="{collapsed: collapedSideBar}">
+    <div class="spinner-border text-primary" role="status" *ngIf="loading">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <router-outlet></router-outlet>
+</section>

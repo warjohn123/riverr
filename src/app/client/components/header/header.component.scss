@@ -1,0 +1,73 @@
+:host {
+    .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar {
+        padding: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+        justify-content: inherit;
+        margin-left: auto;
+        margin-right: auto;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        background-color: #F3f3f3;
+        color: #222;
+        h5 {
+            margin-left: 30px;
+            margin-top: 9px;
+        }
+
+        @media(max-width: 992px) {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .router-link-active {
+            color: rgb(0, 167, 167) !important;
+        }
+
+        .navbar-toggler {
+            @media (min-width: 993px) {
+                display: none;
+            }
+        }
+
+        .navbar-collapse {
+            @media (max-width: 992px) and (min-width: 768px) {
+                display: flex !important;
+                flex-basis: auto;
+            }
+        }
+
+    }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+.dropdown-toggle::after {
+    display:none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

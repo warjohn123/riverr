@@ -1,0 +1,43 @@
+<div class="modal-header">
+    <h5 class="modal-title">{{appointmentObj ? 'Edit Appointment' : 'New Appointment'}}</h5>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<form #f="ngForm" (ngSubmit)="save(appointment)">
+    <div class="modal-body">
+        <div class="form-group">
+            <label>Patient: {{patient.pet_name}}</label>
+        </div>
+        <div class="form-group">
+            <label>Start Time</label>
+            <ngb-timepicker name="start_time" [(ngModel)]="appointment.start_time"></ngb-timepicker>
+        </div>
+        <div class="form-group">
+            <label>End Time</label>
+            <ngb-timepicker name="end_time" [(ngModel)]="appointment.end_time"></ngb-timepicker>
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <input class="form-control py-4" name="description" [(ngModel)]="appointment.description">
+        </div>
+        <div class="form-group">
+            <label>Fee</label>
+            <input class="form-control py-4" name="fee" type="number" [(ngModel)]="appointment.fee">
+        </div>
+        <div class="form-group">
+            <label>Status</label>
+            <select class="form-control" name="status" [(ngModel)]="appointment.feeStatus">
+                <option value="Paid">Paid</option>
+                <option value="Unpaid">Unpaid</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" [disabled]="isSaving">Save</button>
+        <button type="button" class="btn btn-default" [disabled]="isSaving" (click)="activeModal.dismiss('Close click')">Cancel</button>
+    </div>
+</form>

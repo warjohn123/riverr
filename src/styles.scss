@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@media screen and (max-width: 992px) {
+    .push-right {
+        .sidebar {
+            top: 0 !important;
+            left: 235px !important;
+        }
+    }
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,42 @@
+table {
+    font-size: 12px;
+
+    .action-btn {
+        margin-left: 5px;
+    }
+    
+    .fa {
+        color: #1b9ce4;
+        font-size: 19px;
+        cursor: pointer;
+        display: inline-block;
+    }
+    
+    .fa-trash {
+        color: red;
+    }
+
+    .add-btn {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 100px;
+        background: #1e791e;
+        border: none;
+        outline: none;
+
+        .fa {
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+    
+    th {
+        border-top: 0;
+    }
+    
+    .avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+}
